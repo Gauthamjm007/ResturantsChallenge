@@ -45,7 +45,7 @@ export default class Resturants extends Component {
             paddingBottom: "0rem"
           }}
         >
-          <a href="https://github.com/gitname/react-gh-pages">
+          <a href="https://github.com/Gauthamjm007/ResturantsChallenge">
             <Icon.GitHub size={30} />
           </a>
         </div>

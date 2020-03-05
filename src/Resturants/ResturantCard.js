@@ -4,13 +4,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 
-
 function ResturantCard(props) {
   return (
     <div align="center">
       <br />
-    
-      <div>
+
+      <div className="typography">
         <Card
           style={{
             width: 500,
@@ -20,7 +19,12 @@ function ResturantCard(props) {
           }}
         >
           <CardContent>
-            <Typography variant="body2" component="p" align="left">
+            <Typography
+              variant="body2"
+              component="p"
+              align="left"
+              fontFamily="Raleway"
+            >
               Brand:{props.resturants.Brand}
               <br />
               Variety:{props.resturants.Variety}
