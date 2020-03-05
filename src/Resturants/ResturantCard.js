@@ -14,8 +14,8 @@ function ResturantCard(props) {
           style={{
             width: 500,
             background:
-              Number(props.resturants.Stars) == 5 ? "#f0f0f0" : "grey",
-            color: Number(props.resturants.Stars) == 5 ? "black" : "white"
+              Number(props.resturants.Stars) === 5 ? "#f0f0f0" : "grey",
+            color: Number(props.resturants.Stars) === 5 ? "black" : "white"
           }}
         >
           <CardContent>
@@ -29,11 +29,17 @@ function ResturantCard(props) {
               <br />
               Country:{props.resturants.Country}
               <br />
-              Rank:{props.resturants.TopTen}
+              {props.resturants.TopTen === "NaN"
+                ? "Not ranked Yet"
+                : props.resturants.TopTen.split("#").join("-Rank:")}
               <br />
               <Rating
                 name="half-rating"
-                defaultValue={Number(props.resturants.Stars)}
+                defaultValue={
+                  isNaN(Number(props.resturants.Stars))
+                    ? 0
+                    : Number(props.resturants.Stars)
+                }
                 precision={0.5}
                 readOnly
               />
