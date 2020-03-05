@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ResturantsChallenge/static/css/main.defb7a05.chunk.css",
-    "main.js": "/ResturantsChallenge/static/js/main.ec28a5a9.chunk.js",
-    "main.js.map": "/ResturantsChallenge/static/js/main.ec28a5a9.chunk.js.map",
+    "main.js": "/ResturantsChallenge/static/js/main.a6248fbb.chunk.js",
+    "main.js.map": "/ResturantsChallenge/static/js/main.a6248fbb.chunk.js.map",
     "runtime-main.js": "/ResturantsChallenge/static/js/runtime-main.6a7c3d51.js",
     "runtime-main.js.map": "/ResturantsChallenge/static/js/runtime-main.6a7c3d51.js.map",
-    "static/js/2.a5ce5530.chunk.js": "/ResturantsChallenge/static/js/2.a5ce5530.chunk.js",
-    "static/js/2.a5ce5530.chunk.js.map": "/ResturantsChallenge/static/js/2.a5ce5530.chunk.js.map",
+    "static/js/2.23ff9e50.chunk.js": "/ResturantsChallenge/static/js/2.23ff9e50.chunk.js",
+    "static/js/2.23ff9e50.chunk.js.map": "/ResturantsChallenge/static/js/2.23ff9e50.chunk.js.map",
     "index.html": "/ResturantsChallenge/index.html",
-    "precache-manifest.431ca317158377bc0eb7c67bfadf2901.js": "/ResturantsChallenge/precache-manifest.431ca317158377bc0eb7c67bfadf2901.js",
+    "precache-manifest.c7fb781a9da6327489562e20975fa6b0.js": "/ResturantsChallenge/precache-manifest.c7fb781a9da6327489562e20975fa6b0.js",
     "service-worker.js": "/ResturantsChallenge/service-worker.js",
     "static/css/main.defb7a05.chunk.css.map": "/ResturantsChallenge/static/css/main.defb7a05.chunk.css.map",
-    "static/js/2.a5ce5530.chunk.js.LICENSE.txt": "/ResturantsChallenge/static/js/2.a5ce5530.chunk.js.LICENSE.txt"
+    "static/js/2.23ff9e50.chunk.js.LICENSE.txt": "/ResturantsChallenge/static/js/2.23ff9e50.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6a7c3d51.js",
-    "static/js/2.a5ce5530.chunk.js",
+    "static/js/2.23ff9e50.chunk.js",
     "static/css/main.defb7a05.chunk.css",
-    "static/js/main.ec28a5a9.chunk.js"
+    "static/js/main.a6248fbb.chunk.js"
   ]
 }
