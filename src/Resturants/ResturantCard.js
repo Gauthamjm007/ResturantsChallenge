@@ -4,11 +4,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 
+
 function ResturantCard(props) {
   return (
     <div align="center">
       <br />
-
+    
       <div>
         <Card
           style={{

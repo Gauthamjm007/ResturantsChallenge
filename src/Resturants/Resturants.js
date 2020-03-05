@@ -6,6 +6,8 @@ import React, { Component } from "react";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
+import * as Icon from "react-feather";
+import Noodle from "./noodle";
 
 export default class Resturants extends Component {
   constructor() {
@@ -35,11 +37,19 @@ export default class Resturants extends Component {
   render() {
     return (
       <div>
-        <img
-          src="https://i.ya-webdesign.com/images/bowl-of-ramen-png-1.png"
-          alt=""
-          width="150"
-        ></img>
+        <div
+          align="right"
+          style={{
+            marginRight: "5rem",
+            marginTop: "2rem",
+            paddingBottom: "0rem"
+          }}
+        >
+          <a href="https://github.com/gitname/react-gh-pages">
+            <Icon.GitHub size={30} />
+          </a>
+        </div>
+        <Noodle />
         <h1>Top Ramen Resturants</h1>
 
         <br />
