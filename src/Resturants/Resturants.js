@@ -8,6 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import * as Icon from "react-feather";
 import Noodle from "./noodle";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 export default class Resturants extends Component {
   constructor() {
@@ -25,14 +26,18 @@ export default class Resturants extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   componentDidMount() {
-    axios.get("http://starlord.hackerearth.com/TopRamen").then((response) => {
-      const resturants = JSON.parse(
-        JSON.stringify(response.data).replace(/\s(?=\w+":)/g, "")
-      );
+    axios
+      .get(
+        "https://cors-anywhere.herokuapp.com/starlord.hackerearth.com/TopRamen"
+      )
+      .then((response) => {
+        const resturants = JSON.parse(
+          JSON.stringify(response.data).replace(/\s(?=\w+":)/g, "")
+        );
 
-      let countries = [...new Set(resturants.map((ele) => ele.Country))];
-      this.setState({ resturants, countries });
-    });
+        let countries = [...new Set(resturants.map((ele) => ele.Country))];
+        this.setState({ resturants, countries });
+      });
   }
   render() {
     return (
@@ -100,19 +105,30 @@ export default class Resturants extends Component {
           </Select>
         </FormControl>
 
-        {this.state.resturants !== "" &&
-          this.state.resturants
-            .filter(
-              (ele) =>
-                !ele.Brand.toLowerCase().indexOf(
-                  this.state.search.toLowerCase()
-                )
-            )
-            .filter((country) => !country.Country.indexOf(this.state.country))
-            .filter((year) => year.TopTen.includes(this.state.year))
-            .map((ele, i) => {
-              return <ResturantCard resturants={ele} key={i} />;
-            })}
+        {this.state.resturants !== "" ? (
+          <div>
+            {this.state.resturants
+              .filter(
+                (ele) =>
+                  !ele.Brand.toLowerCase().indexOf(
+                    this.state.search.toLowerCase()
+                  )
+              )
+              .filter((country) => !country.Country.indexOf(this.state.country))
+              .filter((year) => year.TopTen.includes(this.state.year))
+              .map((ele, i) => {
+                return <ResturantCard resturants={ele} key={i} />;
+              })}
+            ) <br />
+          </div>
+        ) : (
+          <>
+            <br />
+            <br />
+            <br />
+            <CircularProgress />
+          </>
+        )}
       </div>
     );
   }
